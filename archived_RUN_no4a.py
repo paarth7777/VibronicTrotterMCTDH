@@ -1,6 +1,6 @@
 """
 Basic script for generating all required MCTDH directories and input files, and
-automatically submitting the jobs to a slurm queue. Example: DABNA
+automatically submitting the jobs to a slurm queue. Example: (NO)4-Anthracene
 """
 
 import pickle
@@ -8,25 +8,27 @@ import numpy as np
 from driver_mk_inputs import mk_input
 from mode_selector import get_reduced_model
 from mode_combiner import combine_by_frequency
-from pennylane.labs.pf.vibronic import (
-    VibronicMatrix,
-    VibronicHamiltonian,
-)
+# from pennylane.labs.pf.vibronic import (
+#     VibronicMatrix,
+#     VibronicHamiltonian,
+# )
+
 
 """
 PARAMETERS
 """
-NUM_STATES = 6
-NUM_MODEs = list(range(1, 10 + 1))
+NUM_STATES = 5
+NUM_MODEs = list(range(1, 3 + 1))
 DELTATs = [0.001, 0.01, 0.1, 1.0]
 TMAX = 500
-VIBHAMFILE = "./VCHLIB/dabna_6s10m.pkl"
-DIRNAME = "EXPS_DABNA"
-INIT_STATE = 0  # S1 state
+VIBHAMFILE = "./VCHLIB/n4o4a_sf.pkl"
+DIRNAME = "EXPS_NO4A"
+INIT_STATE = 3  # S0S1 state
 SUBMIT_SLURM = False
 PTHREADS = 64
 EXACT = True
-BASENAME = "dabna"
+BASENAME = "no4a"
+
 
 """
 Load a vibronic Hamiltonian
@@ -76,7 +78,6 @@ for NUM_MODE in NUM_MODEs:
         if EXACT:
             jobdir += '_exact'
 
-
         parameters = {
             "N_states": NUM_STATES,
             "M_modes": NUM_MODE,
@@ -92,8 +93,8 @@ for NUM_MODE in NUM_MODEs:
         # save parameters to a pickle file in ./data
 
         datafile_name = f"{jobdir}_dt={DELTAT}"
-        if EXACT:
-            datafile_name += '_exact'
+        # if EXACT:
+        #     datafile_name += '_exact'
         with open(f"./data/{datafile_name}.pkl", "wb") as f:
             pickle.dump(parameters, f)
 
@@ -115,6 +116,7 @@ for NUM_MODE in NUM_MODEs:
             make_slurm_file=True,
         )
 
+
 """
 Submit the MCTDH jobs via slurm 
 """
@@ -134,5 +136,6 @@ if SUBMIT_SLURM:
             print(f"!! Submitting {file} !!")
             subprocess.run(["sbatch", file], check=True)
         os.chdir("../../..")
+
 
 print("**************\nMAIN_RUN.py successfully terminating.\n**************")

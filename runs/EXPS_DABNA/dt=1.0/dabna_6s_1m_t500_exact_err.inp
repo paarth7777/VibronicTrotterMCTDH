@@ -1,0 +1,50 @@
+
+RUN-SECTION
+usepthreads = 64
+name = dabna_6s_1m_t500_exact_err
+title = dabna_6s_1m_t500_exact_err
+propagation exact
+tfinal = 500  
+tout = 5.0  
+tpsi = 5.0
+geninwf
+psi
+#genpes
+auto
+end-run-section
+
+OPERATOR-SECTION
+opname = dabna_6s_1m_t500_exact_err
+end-operator-section
+
+ALLOC-SECTION
+maxkoe = 626
+maxhtm = 1252
+maxhop = 1252
+maxfac = 600
+
+end-alloc-section
+
+SPF-BASIS-SECTION
+
+end-spf-basis-section
+
+PRIMITIVE-BASIS-SECTION
+    mode1     HO     8   0.0   1.0   1.0
+    el        el     8
+end-primitive-basis-section
+
+INTEGRATOR-SECTION
+    #nohsym
+    SIL/all   =  20,  1.0d-12
+end-integrator-section
+    
+
+INIT_WF-SECTION
+build
+init_state = 1
+mode1       HO      0.0    0.0    1.0
+end-build 
+end-init_wf-section
+
+end-input

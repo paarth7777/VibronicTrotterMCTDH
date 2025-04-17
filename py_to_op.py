@@ -136,8 +136,8 @@ def map_terms(block_operator, thresh=1e-12):
     Updated code:
     """
 
-    for I in range(n):
-        for J in range(n):
+    for I in range(int(n)):
+        for J in range(int(n)):
             for term in block_operator.block(I, J).ops:
 
                 #shape = (m,) * len(term.ops)
@@ -145,7 +145,7 @@ def map_terms(block_operator, thresh=1e-12):
                 # print(f'number of possible indices: {m**len(term.ops)}')
                 # print(f'number of nonzero indices: {len(list(indices))}')
                 for index in indices:
-                    coeff = term.coeffs.compute(index)
+                    coeff = term.coeffs[index]
                     if abs(coeff) >= thresh:
                         label = term_label(I, J, term.ops, index)
                         assert label not in param_dict

@@ -2,7 +2,7 @@ from driver_rdcheck import read_populations
 import pickle
 
 """
-PARAMETERS
+PARAMETERS DABNA
 """
 
 DIRNAME = "EXPS_DABNA"
@@ -11,6 +11,17 @@ NUM_MODEs = list(range(1, 10 + 1))
 NUM_STATE = 6
 DELTATs = [0.001, 0.01, 0.1, 1.0]
 TMAX = 500
+
+"""
+PARAMETERS N4O4
+"""
+
+# DIRNAME = "EXPS_NO4A"
+# BASENAME = "no4a"
+# NUM_MODEs = [1,2,3]
+# NUM_STATE = 5
+# DELTATs = [0.001, 0.01, 0.1, 1.0]
+# TMAX = 500
 
 for NUM_MODE in NUM_MODEs:
     for DELTAT in DELTATs:
