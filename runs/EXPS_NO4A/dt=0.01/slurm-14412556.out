@@ -1,0 +1,38 @@
+
+scontrol show job 14412556
+JobId=14412556 JobName=mctdh_no4a_5s_3m_t500_3_exact
+   UserId=jainpaar(3145740) GroupId=izmaylov(6006470) MCS_label=N/A
+   Priority=1141536 Nice=0 Account=rrg-izmaylov QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:00:06 TimeLimit=02:00:00 TimeMin=N/A
+   SubmitTime=2025-04-21T13:39:49 EligibleTime=2025-04-21T13:39:49
+   AccrueTime=2025-04-21T13:39:49
+   StartTime=2025-04-21T13:39:51 EndTime=2025-04-21T13:39:57 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2025-04-21T13:39:51 Scheduler=Main
+   Partition=compute AllocNode:Sid=nia-login05:112182
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=nia0983
+   BatchHost=nia0983
+   NumNodes=1 NumCPUs=80 NumTasks=40 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=40,mem=175000M,node=1,billing=20
+   AllocTRES=cpu=80,mem=175000M,node=1,billing=40
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryNode=175000M MinTmpDiskNode=0
+   Features=[skylake|cascade] DelayBoot=00:00:00
+   OverSubscribe=NO Contiguous=0 Licenses=(null) Network=(null)
+   Command=/gpfs/fs0/scratch/i/izmaylov/jainpaar/VibronicTrotterMCTDH/runs/EXPS_NO4A/dt=0.01/no4a_5s_3m_t500_3_exact.slurm
+   WorkDir=/gpfs/fs0/scratch/i/izmaylov/jainpaar/VibronicTrotterMCTDH/runs/EXPS_NO4A/dt=0.01
+   Comment=/opt/slurm/bin/sbatch --export=NONE no4a_5s_3m_t500_3_exact.slurm 
+   StdErr=/gpfs/fs0/scratch/i/izmaylov/jainpaar/VibronicTrotterMCTDH/runs/EXPS_NO4A/dt=0.01/slurm-14412556.out
+   StdIn=/dev/null
+   StdOut=/gpfs/fs0/scratch/i/izmaylov/jainpaar/VibronicTrotterMCTDH/runs/EXPS_NO4A/dt=0.01/slurm-14412556.out
+   MailUser=paarth.jain@mail.utoronto.ca MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT
+   
+
+sacct -j 14412556
+JobID           JobName    Account    Elapsed  MaxVMSize     MaxRSS  SystemCPU    UserCPU ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- ---------- ---------- -------- 
+14412556     mctdh_no4+ rrg-izmay+   00:00:06                        00:02.975  00:03.322      0:0 
+14412556.ba+      batch rrg-izmay+   00:00:06    137120K      1532K  00:02.974  00:03.322      0:0 
+14412556.ex+     extern rrg-izmay+   00:00:06    136828K      1028K   00:00:00   00:00:00      0:0 

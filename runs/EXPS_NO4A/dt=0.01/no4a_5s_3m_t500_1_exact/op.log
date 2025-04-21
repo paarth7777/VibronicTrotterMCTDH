@@ -1,0 +1,465 @@
+WARNING: Mass for DOF   1 not set. Set to 1 by default.
+WARNING: Mass for DOF   2 not set. Set to 1 by default.
+WARNING: Mass for DOF   3 not set. Set to 1 by default.
+
+******* Array-Dimensions *******
+
+ k   :  minkoe, maxkoe      99     194
+ h   :  htmdim, maxhtm     178     388
+ hl  :  hopdim, maxhop     175     388
+ nh  :  minfac, maxfac      17     600
+ n   :    ndef, maxdef      85     240
+ n   :    npar, maxpar      98      98
+ n   :    nrdf, maxrdf       0       0
+ np  : npesopt, maxpes       0       1
+ nham:  hamdim, maxham       1       1
+ muld: mulddim,maxmuld       0      10
+ LMR :    iLMR, maxLMR       0      20
+ (for minedim, maxedim see log file)
+
+***** Operator details *****
+
+ndof   =   4 ,  nmode   =   1
+nopdof =   5 ,  nopmode =   3
+feb =  4,  meb =  3,   fpb =  0,  mpb =  0,  mkoe =  2
+leb = F,  lmult = T,  lmulpack = F,  lcap = F
+
+DOF no.    label
+    1       mode1
+    2       mode2
+    3       mode3
+    4       el
+- - - - - - - - - - - - - - -
+    5       Koeff
+
+Mode     DOFs
+   1    1=   mode1  2=   mode2  3=   mode3
+- - - - - - - - - - - - - - -
+   2    5=   Koeff
+   3    4=      el
+
+Information for Hamiltonian : system
+
+Total no. of terms      :     35
+No. of correlated terms :     20
+
+No. of uncorrelated terms for mode   1  state  1:     3
+No. of uncorrelated terms for mode   1  state  2:     3
+No. of uncorrelated terms for mode   1  state  3:     3
+No. of uncorrelated terms for mode   1  state  4:     3
+No. of uncorrelated terms for mode   1  state  5:     3
+No. of uncorrelated terms for mode   1  state  6:     0
+No. of uncorrelated terms for mode   1  state  7:     0
+No. of uncorrelated terms for mode   1  state  8:     0
+
+  Parameters
+PI                      3.141592653590
+c38edce2ae8f5624   -2.802538167015E-03
+c8c05e49a5a6b880   -3.772929360020E-03
+c4a40eab7a7b07e1   -2.925365583345E-03
+c3ff6e92baf6fb5b        0.005581227615
+cb0c3c00021c45dc        0.007816161073
+cb448d1559a18a92        0.005796631102
+c0e8ad715de0f7a8   -3.676785100264E-10
+cb4e26c9a4340ec0   -3.145098672964E-10
+c8995c1b22a2a56e   -3.913465585039E-03
+c5a2adc714a62e6d   -7.417201787252E-03
+c812f270829221ab   -2.463337146020E-04
+caa7c36dfe2e8d6d   -1.743781248949E-04
+c55bd62793674fd9        0.000151197352
+cb5443beaf3a2c61   -2.325923654965E-10
+c2c74751340d535a   -5.330581027642E-12
+c9ba0e4c47c118ad        0.000999407295
+c6e6e2f9ccccfdb6   -2.507911959657E-10
+c18b062ea94ff6fb   -2.054409497339E-03
+c981fdba4034bacd    4.182991082174E-12
+c2aacef216021072   -1.167425083514E-02
+cc7299946113ea0c    1.090674555351E-11
+c80fef1372d99592    7.926774875572E-11
+c8e4d028387190b8   -7.417201787252E-03
+c13a80a743aac631   -2.463337146020E-04
+cbafb44d7c3bbcdc   -1.743781248949E-04
+ca1d5dea5412b1be        0.000151197352
+c90974a786e58796   -2.325923654965E-10
+ce39a5f8c2d88c4c   -5.330581027642E-12
+c2be4da5eaaebd11        0.000999407295
+c94949b5405d8ff2   -2.802538167015E-03
+c2f5cc15e21e334c   -3.772929360020E-03
+c618eb374fd00ad2   -2.925365583345E-03
+c2ee94423db78f12        0.082079744547
+c392c0ff1632a8ae        0.006250584007
+cd232fb32406595d        0.008289994355
+c6c76e2473b0a0c2        0.005385786350
+c47bade0f312557b   -2.918902992150E-10
+cc07faab071ca8b7   -6.576137709958E-10
+c4d5b84c188a72bb   -6.629129828250E-03
+ced6b34b352f5326   -1.056585909398E-10
+ca10bbe619fb3efb        0.006256941673
+cb4dd431b33125df    1.612160762121E-10
+c402627b52a9a3a8   -1.149175362704E-10
+c6048645ae886748   -7.269204678758E-10
+cce2bb2a2499c97d   -7.633602499958E-11
+cbeb83a3691d35d9   -3.833133348986E-03
+c6458066a44fe234   -1.494266789197E-10
+ce05ffd7d1bbfe7e    7.364440990727E-11
+c51bd584a8643fbb   -2.507911959657E-10
+cf1445acc9e8ce94   -2.054409497339E-03
+c4b3ed8f9c17aa4e    4.182991209694E-12
+c853be8f000d56a8   -1.056585909398E-10
+ca7f7c22bda8a203        0.006256941673
+c07446f8ad36379d    1.612160757024E-10
+c782ea6e9ae7ce86   -2.802538167015E-03
+c086be8f4277bc63   -3.772929360020E-03
+cffd763f637833a5   -2.925365583345E-03
+c81e0bc432e9597d        0.101710733392
+c118633859fb3674        0.006331465426
+c19f85727c426f50        0.008347249816
+c5ad58139f872217        0.005336142084
+cbceec42d746a21e   -1.613905930001E-10
+c5fa6e0ab0dfca74    1.221436378102E-10
+c6cc220fdd27e600   -6.957276060841E-03
+cef331f5cd5759cb    5.146877354660E-11
+cf861bc1722e1e04    8.442383730178E-10
+c42a3c8f1f94b334   -1.149175362704E-10
+c078505b64cee7ed   -7.269204678758E-10
+cbed2a1f467f1703   -7.633602499958E-11
+c7ce35effdf405a9    5.146877354660E-11
+c02b663501a059d4    8.442383730178E-10
+ce0eae81d45d2deb   -2.802538167015E-03
+c65bdbcc7fd4a2d6   -3.772929360020E-03
+c57dc621361e7c62   -2.925365583345E-03
+cf8d69f312fc297b        0.102941834359
+c1ee9797fd9e9e1f        0.005572268915
+ca1e495f7a1a2a08        0.005214051275
+c853c269cc185992        0.004265515672
+cc7277b8886ddc8c   -5.609157130809E-10
+ce1ee0ff584ebe8f   -1.655664743667E-10
+cc62cb21c514b448        0.000309475317
+cf3d05313502b8dc   -1.167425083514E-02
+c872859e22f44bf8    1.090674555351E-11
+c75218e11c87a4fa    7.926774901076E-11
+cd03903ccc9d9def   -3.833133348986E-03
+cea9119eb43d8385   -1.494266789197E-10
+c94260a5c3e9c90a    7.364441003479E-11
+c2277f65840317e6   -2.802538167015E-03
+c23b114352876df8   -3.772929360020E-03
+c21878512544eb11   -2.925365583345E-03
+c18f1c9829383419        0.116181158528
+cd9a60408701cbe6        0.005500346195
+cfea589800b95919        0.007758905613
+c4c7f40f1f370b10        0.005846275367
+c75e4cfe13f953a8    8.547095462237E-11
+ce95ed2556f37328   -3.510592919639E-10
+cdd2517aef0de4b4   -3.585319352448E-03
+
+Number of operators removed =     0,  cutoff = 1.00E-09
+
+  Operator Labels    [hl,hoplab,(deflabel),hopilab,hopfile]
+    hl  Label                         function no.  file no.
+     1  1                                       1       302
+     2  -1                                      2       302
+     3  I                                       1       101
+     4  c38edce2ae8f5624                        2       301
+     5  S1&1                                   10         3
+     6  dqdvr^1                                 6         3
+     7  c8c05e49a5a6b880                        3       301
+     8  c4a40eab7a7b07e1                        4       301
+     9  c3ff6e92baf6fb5b                        5       301
+    10  q                                       3       302
+    11  cb0c3c00021c45dc                        6       301
+    12  cb448d1559a18a92                        7       301
+    13  c0e8ad715de0f7a8                        8       301
+    14  cb4e26c9a4340ec0                        9       301
+    15  c8995c1b22a2a56e                       10       301
+    16  c5a2adc714a62e6d                       11       301
+    17  Z1&2                                   12         3
+    18  c812f270829221ab                       12       301
+    19  caa7c36dfe2e8d6d                       13       301
+    20  c55bd62793674fd9                       14       301
+    21  cb5443beaf3a2c61                       15       301
+    22  c2c74751340d535a                       16       301
+    23  c9ba0e4c47c118ad                       17       301
+    24  c6e6e2f9ccccfdb6                       18       301
+    25  Z1&3                                   12         3
+    26  c18b062ea94ff6fb                       19       301
+    27  c981fdba4034bacd                       20       301
+    28  c2aacef216021072                       21       301
+    29  Z1&5                                   12         3
+    30  cc7299946113ea0c                       22       301
+    31  c80fef1372d99592                       23       301
+    32  c8e4d028387190b8                       24       301
+    33  Z2&1                                   12         3
+    34  c13a80a743aac631                       25       301
+    35  cbafb44d7c3bbcdc                       26       301
+    36  ca1d5dea5412b1be                       27       301
+    37  c90974a786e58796                       28       301
+    38  ce39a5f8c2d88c4c                       29       301
+    39  c2be4da5eaaebd11                       30       301
+    40  c94949b5405d8ff2                       31       301
+    41  S2&2                                   10         3
+    42  c2f5cc15e21e334c                       32       301
+    43  c618eb374fd00ad2                       33       301
+    44  c2ee94423db78f12                       34       301
+    45  c392c0ff1632a8ae                       35       301
+    46  cd232fb32406595d                       36       301
+    47  c6c76e2473b0a0c2                       37       301
+    48  c47bade0f312557b                       38       301
+    49  cc07faab071ca8b7                       39       301
+    50  c4d5b84c188a72bb                       40       301
+    51  ced6b34b352f5326                       41       301
+    52  Z2&3                                   12         3
+    53  ca10bbe619fb3efb                       42       301
+    54  cb4dd431b33125df                       43       301
+    55  c402627b52a9a3a8                       44       301
+    56  Z2&4                                   12         3
+    57  c6048645ae886748                       45       301
+    58  cce2bb2a2499c97d                       46       301
+    59  cbeb83a3691d35d9                       47       301
+    60  Z2&5                                   12         3
+    61  c6458066a44fe234                       48       301
+    62  ce05ffd7d1bbfe7e                       49       301
+    63  c51bd584a8643fbb                       50       301
+    64  Z3&1                                   12         3
+    65  cf1445acc9e8ce94                       51       301
+    66  c4b3ed8f9c17aa4e                       52       301
+    67  c853be8f000d56a8                       53       301
+    68  Z3&2                                   12         3
+    69  ca7f7c22bda8a203                       54       301
+    70  c07446f8ad36379d                       55       301
+    71  c782ea6e9ae7ce86                       56       301
+    72  S3&3                                   10         3
+    73  c086be8f4277bc63                       57       301
+    74  cffd763f637833a5                       58       301
+    75  c81e0bc432e9597d                       59       301
+    76  c118633859fb3674                       60       301
+    77  c19f85727c426f50                       61       301
+    78  c5ad58139f872217                       62       301
+    79  cbceec42d746a21e                       63       301
+    80  c5fa6e0ab0dfca74                       64       301
+    81  c6cc220fdd27e600                       65       301
+    82  cef331f5cd5759cb                       66       301
+    83  Z3&4                                   12         3
+    84  cf861bc1722e1e04                       67       301
+    85  c42a3c8f1f94b334                       68       301
+    86  Z4&2                                   12         3
+    87  c078505b64cee7ed                       69       301
+    88  cbed2a1f467f1703                       70       301
+    89  c7ce35effdf405a9                       71       301
+    90  Z4&3                                   12         3
+    91  c02b663501a059d4                       72       301
+    92  ce0eae81d45d2deb                       73       301
+    93  S4&4                                   10         3
+    94  c65bdbcc7fd4a2d6                       74       301
+    95  c57dc621361e7c62                       75       301
+    96  cf8d69f312fc297b                       76       301
+    97  c1ee9797fd9e9e1f                       77       301
+    98  ca1e495f7a1a2a08                       78       301
+    99  c853c269cc185992                       79       301
+   100  cc7277b8886ddc8c                       80       301
+   101  ce1ee0ff584ebe8f                       81       301
+   102  cc62cb21c514b448                       82       301
+   103  cf3d05313502b8dc                       83       301
+   104  Z5&1                                   12         3
+   105  c872859e22f44bf8                       84       301
+   106  c75218e11c87a4fa                       85       301
+   107  cd03903ccc9d9def                       86       301
+   108  Z5&2                                   12         3
+   109  cea9119eb43d8385                       87       301
+   110  c94260a5c3e9c90a                       88       301
+   111  c2277f65840317e6                       89       301
+   112  S5&5                                   10         3
+   113  c23b114352876df8                       90       301
+   114  c21878512544eb11                       91       301
+   115  c18f1c9829383419                       92       301
+   116  cd9a60408701cbe6                       93       301
+   117  cfea589800b95919                       94       301
+   118  c4c7f40f1f370b10                       95       301
+   119  c75e4cfe13f953a8                       96       301
+   120  ce95ed2556f37328                       97       301
+   121  cdd2517aef0de4b4                       98       301
+
+Hamiltonian Operator Terms [h,htmdof,htmadof,htmndof,htmmode,htmmuld,htmtype,
+                            htmsym,htmshift,string]
+   No.   f  af  nf   m  md Typ Sym   Shift      Term
+     1   1   1   0   0   0   1   1       0    1
+     2   2   2   0   0   0   1   1       0    1
+     3   3   3   0   0   0   1   1       0    1
+     4   4   4   0   0   0   1   1       0    1
+     5   K           0   0   1   1            1
+    20   1   1   0   0   0   2   0       0    q
+    22   2   2   0   0   0   2   0       0    q
+    24   3   3   0   0   0   2   0       0    q
+    25   K           0   0   2   1            c5a2adc714a62e6d
+    33   K           0   0   2   1            c6e6e2f9ccccfdb6
+    35   K           0   0   2   1            c18b062ea94ff6fb
+    36   K           0   0   2   1            c981fdba4034bacd
+    37   K           0   0   2   1            c2aacef216021072
+    39   K           0   0   2   1            cc7299946113ea0c
+    40   K           0   0   2   1            c80fef1372d99592
+    41   K           0   0   2   1            c8e4d028387190b8
+    53   K           0   0   2   1            c2ee94423db78f12
+    60   K           0   0   2   1            ced6b34b352f5326
+    62   K           0   0   2   1            ca10bbe619fb3efb
+    63   K           0   0   2   1            cb4dd431b33125df
+    64   K           0   0   2   1            c402627b52a9a3a8
+    66   K           0   0   2   1            c6048645ae886748
+    67   K           0   0   2   1            cce2bb2a2499c97d
+    68   K           0   0   2   1            cbeb83a3691d35d9
+    70   K           0   0   2   1            c6458066a44fe234
+    71   K           0   0   2   1            ce05ffd7d1bbfe7e
+    72   K           0   0   2   1            c51bd584a8643fbb
+    74   K           0   0   2   1            cf1445acc9e8ce94
+    75   K           0   0   2   1            c4b3ed8f9c17aa4e
+    76   K           0   0   2   1            c853be8f000d56a8
+    78   K           0   0   2   1            ca7f7c22bda8a203
+    79   K           0   0   2   1            c07446f8ad36379d
+    84   K           0   0   2   1            c81e0bc432e9597d
+    91   K           0   0   2   1            cef331f5cd5759cb
+    93   K           0   0   2   1            cf861bc1722e1e04
+    94   K           0   0   2   1            c42a3c8f1f94b334
+    96   K           0   0   2   1            c078505b64cee7ed
+    97   K           0   0   2   1            cbed2a1f467f1703
+    98   K           0   0   2   1            c7ce35effdf405a9
+   100   K           0   0   2   1            c02b663501a059d4
+   105   K           0   0   2   1            cf8d69f312fc297b
+   112   K           0   0   2   1            cf3d05313502b8dc
+   114   K           0   0   2   1            c872859e22f44bf8
+   115   K           0   0   2   1            c75218e11c87a4fa
+   116   K           0   0   2   1            cd03903ccc9d9def
+   118   K           0   0   2   1            cea9119eb43d8385
+   119   K           0   0   2   1            c94260a5c3e9c90a
+   124   K           0   0   2   1            c18f1c9829383419
+   131   1   1   0   0   0   8   1       0    dqdvr^1*dqdvr^1*c38edce2ae8f5624 +
+                              q*q*c3ff6e92baf6fb5b + q*c0e8ad715de0f7a8
+   132   2   2   0   0   0   8   1       0    dqdvr^1*dqdvr^1*c8c05e49a5a6b880 +
+                              q*q*cb0c3c00021c45dc + q*cb4e26c9a4340ec0
+   133   3   3   0   0   0   8   1       0    dqdvr^1*dqdvr^1*c4a40eab7a7b07e1 +
+                              q*q*cb448d1559a18a92 + q*c8995c1b22a2a56e
+   134   1   1   0   0   0   2   0       0    q*q*c812f270829221ab + q*cb5443beaf3a2c61
+   135   2   2   0   0   0   2   0       0    q*q*caa7c36dfe2e8d6d + q*c2c74751340d535a
+   136   3   3   0   0   0   2   0       0    q*q*c55bd62793674fd9 + q*c9ba0e4c47c118ad
+   137   1   1   0   0   0   2   0       0    q*q*c13a80a743aac631 + q*c90974a786e58796
+   138   2   2   0   0   0   2   0       0    q*q*cbafb44d7c3bbcdc + q*ce39a5f8c2d88c4c
+   139   3   3   0   0   0   2   0       0    q*q*ca1d5dea5412b1be + q*c2be4da5eaaebd11
+   140   1   1   0   0   0   8   1       0    dqdvr^1*dqdvr^1*c94949b5405d8ff2 +
+                              q*q*c392c0ff1632a8ae + q*c47bade0f312557b
+   141   2   2   0   0   0   8   1       0    dqdvr^1*dqdvr^1*c2f5cc15e21e334c +
+                              q*q*cd232fb32406595d + q*cc07faab071ca8b7
+   142   3   3   0   0   0   8   1       0    dqdvr^1*dqdvr^1*c618eb374fd00ad2 +
+                              q*q*c6c76e2473b0a0c2 + q*c4d5b84c188a72bb
+   143   1   1   0   0   0   8   1       0    dqdvr^1*dqdvr^1*c782ea6e9ae7ce86 +
+                              q*q*c118633859fb3674 + q*cbceec42d746a21e
+   144   2   2   0   0   0   8   1       0    dqdvr^1*dqdvr^1*c086be8f4277bc63 +
+                              q*q*c19f85727c426f50 + q*c5fa6e0ab0dfca74
+   145   3   3   0   0   0   8   1       0    dqdvr^1*dqdvr^1*cffd763f637833a5 +
+                              q*q*c5ad58139f872217 + q*c6cc220fdd27e600
+   146   1   1   0   0   0   8   1       0    dqdvr^1*dqdvr^1*ce0eae81d45d2deb +
+                              q*q*c1ee9797fd9e9e1f + q*cc7277b8886ddc8c
+   147   2   2   0   0   0   8   1       0    dqdvr^1*dqdvr^1*c65bdbcc7fd4a2d6 +
+                              q*q*ca1e495f7a1a2a08 + q*ce1ee0ff584ebe8f
+   148   3   3   0   0   0   8   1       0    dqdvr^1*dqdvr^1*c57dc621361e7c62 +
+                              q*q*c853c269cc185992 + q*cc62cb21c514b448
+   149   1   1   0   0   0   8   1       0    dqdvr^1*dqdvr^1*c2277f65840317e6 +
+                              q*q*cd9a60408701cbe6 + q*c75e4cfe13f953a8
+   150   2   2   0   0   0   8   1       0    dqdvr^1*dqdvr^1*c23b114352876df8 +
+                              q*q*cfea589800b95919 + q*ce95ed2556f37328
+   151   3   3   0   0   0   8   1       0    dqdvr^1*dqdvr^1*c21878512544eb11 +
+                              q*q*c4c7f40f1f370b10 + q*cdd2517aef0de4b4
+   152   0   0   0   1   0   1   1       0    (1)*(2)*(3)
+   162   0   0   0   1   0   2   1       0    (134)*(2)*(3) + (1)*(135)*(3) + (1)*(2)*(136)
+   163   0   0   0   1   0   2   1       0    (20)*(2)*(3)*33 + (1)*(22)*(3)*35 +
+                              (1)*(2)*(24)*36
+   164   0   0   0   1   0   2   1       0    (20)*(2)*(3)*37 + (1)*(22)*(3)*39 +
+                              (1)*(2)*(24)*40
+   165   0   0   0   1   0   2   1       0    (137)*(2)*(3) + (1)*(138)*(3) + (1)*(2)*(139)
+   166   0   0   0   1   0   2   1       0    (20)*(2)*(3)*60 + (1)*(22)*(3)*62 +
+                              (1)*(2)*(24)*63
+   167   0   0   0   1   0   2   1       0    (20)*(2)*(3)*64 + (1)*(22)*(3)*66 +
+                              (1)*(2)*(24)*67
+   168   0   0   0   1   0   2   1       0    (20)*(2)*(3)*68 + (1)*(22)*(3)*70 +
+                              (1)*(2)*(24)*71
+   169   0   0   0   1   0   2   1       0    (20)*(2)*(3)*72 + (1)*(22)*(3)*74 +
+                              (1)*(2)*(24)*75
+   170   0   0   0   1   0   2   1       0    (20)*(2)*(3)*76 + (1)*(22)*(3)*78 +
+                              (1)*(2)*(24)*79
+   171   0   0   0   1   0   2   1       0    (1)*(22)*(3)*91 + (1)*(2)*(24)*93
+   172   0   0   0   1   0   2   1       0    (20)*(2)*(3)*94 + (1)*(22)*(3)*96 +
+                              (1)*(2)*(24)*97
+   173   0   0   0   1   0   2   1       0    (1)*(22)*(3)*98 + (1)*(2)*(24)*100
+   174   0   0   0   1   0   2   1       0    (20)*(2)*(3)*112 + (1)*(22)*(3)*114 +
+                              (1)*(2)*(24)*115
+   175   0   0   0   1   0   2   1       0    (20)*(2)*(3)*116 + (1)*(22)*(3)*118 +
+                              (1)*(2)*(24)*119
+
+Correlated Terms  (ki,kf: initial and final el. state. h=hamilton(f,k))
+            dof order =  mode1,  mode2,  mode3 |
+     k  ki  kf coeff   No.s
+     1   2   1   25        152
+     2   2   1    5        162
+     3   3   1    5        163
+     4   5   1    5        164
+     5   1   2   41        152
+     6   1   2    5        165
+     7   2   2   53        152
+     8   3   2    5        166
+     9   4   2    5        167
+    10   5   2    5        168
+    11   1   3    5        169
+    12   2   3    5        170
+    13   3   3   84        152
+    14   4   3    5        171
+    15   2   4    5        172
+    16   3   4    5        173
+    17   4   4  105        152
+    18   1   5    5        174
+    19   2   5    5        175
+    20   5   5  124        152
+
+Terms
+     k   m   s  sym coeff          No.s
+    21   1   1   1    5   real    131    2    3
+    22   1   1   1    5   real      1  132    3
+    23   1   1   1    5   real      1    2  133
+    24   1   2   1    5   real    140    2    3
+    25   1   2   1    5   real      1  141    3
+    26   1   2   1    5   real      1    2  142
+    27   1   3   1    5   real    143    2    3
+    28   1   3   1    5   real      1  144    3
+    29   1   3   1    5   real      1    2  145
+    30   1   4   1    5   real    146    2    3
+    31   1   4   1    5   real      1  147    3
+    32   1   4   1    5   real      1    2  148
+    33   1   5   1    5   real    149    2    3
+    34   1   5   1    5   real      1  150    3
+    35   1   5   1    5   real      1    2  151
+The sum of uncorrelated operators is real and Hermitian!
+
+**** Non-hermitian operators ****
+     Hermitian      =  1
+     Anti-Hermitian = -1
+     No Symmetry    =  0
+
+     k  ki  kf coeff     hsym(m,k)  (Last column is sym of coeff)
+     1   1   2   25       0    0
+     2   1   2    5       0    0
+     3   1   3    5       0    0
+     4   1   5    5       0    0
+     5   2   1   41       0    0
+     6   2   1    5       0    0
+     8   2   3    5       0    0
+     9   2   4    5       0    0
+    10   2   5    5       0    0
+    11   3   1    5       0    0
+    12   3   2    5       0    0
+    14   3   4    5       0    0
+    15   4   2    5       0    0
+    16   4   3    5       0    0
+    18   5   1    5       0    0
+    19   5   2    5       0    0
+
+The correlated operator is NON-HERMITIAN and contains terms of
+unspecified symmetry. Some terms are complex.
+The uncorrelated operator is real and Hermitian!
+
+------------------------------------------------------------------------------
+

@@ -1,0 +1,15 @@
+ Subroutine           Calls N         cpu/N             cpu       %cpu      real/N          real  cpu/real
+
+ SIL                      100         0.046           4.6300      75.8
+ Funkex                  6796         0.001           4.5300      74.1
+ Startup                    1         0.250           0.2500       4.1
+ genOPER                    1         0.250           0.2500       4.1
+ Output                   101         0.001           0.0700       1.1
+
+Total (usr,sys,cpu)       4.08     2.03       6.11   (  0h :  0m :  6.11s)
+
+ ---------------------------------------------------------------------------
+ ------ Host: "nia0019" ----------Mon Apr 21 13:38:17 2025
+
+ /gpfs/fs0/scratch/i/izmaylov/jainpaar/VibronicTrotterMCTDH/runs/EXPS_NO4A/dt=0.01/no4a_5s_3m_t500_1_exact_err
+  no4a_5s_3m_t500_1_exact_err                                                  

@@ -1,0 +1,30 @@
+
+# ------ Host: "nia0983" ----------Mon Apr 21 13:39:54 2025
+
+# /gpfs/fs0/scratch/i/izmaylov/jainpaar/VibronicTrotterMCTDH/runs/EXPS_NO4A/dt=0.01/no4a_5s_3m_t500_3_exact
+
+maxdim    =       6
+maxsta    =       8
+maxtape   =       0
+maxdepth  =       0
+maxham    =       1
+maxpar    =     154
+maxhpar   =       8
+maxpes    =       1
+maxrdf    =       0
+maxkoe    =     306,    default =    4000
+maxhtm    =     612,    default =    4000
+maxhop    =     612,    default =    4000
+maxfac    =     600,    default =     200
+maxdef    =     240,    default =     240
+maxmuld   =      10,    default =      10
+maxsub    =     878,    default =     100
+maxLMR    =      20,    default =      20
+maxedim   =      80,    default =      80
+maxreadspf=      10,    default =      10
+maxnhtmshift =   10,    default =      10
+end-alloc
+
+# Run "phelp <parametername>" to see the meaning of the parameter.
+# Or see HTML docu: Input Documentation/Alloc-Section
+

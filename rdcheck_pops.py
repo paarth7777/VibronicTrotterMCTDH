@@ -3,51 +3,94 @@ import subprocess
 
 def read_rdcheckfile(name, dir, n_states, runrdcheck=True):
     """
-    Retreives the time series of diabatic state populations
+    Parses population dynamics from MCTDH output file (when rdcheck86 is unavailable).
     """
 
-    if runrdcheck:
-        result = subprocess.run(
-            ["rdcheck86", "-e"], cwd=f"./{dir}/{name}", capture_output=True, text=True
-        )
+    import os
 
-    else: #read the content of rdcheck86 -e directly 
-        with open(f"{dir}{name}", "r") as file:
-            result = file.read()  # Read the entire file content
+    output_path = os.path.join(dir, name, "output")
+    if not os.path.exists(output_path):
+        raise FileNotFoundError(f"Output file not found: {output_path}")
+
+    with open(output_path, "r") as file:
+        lines = file.readlines()
+
     populations = {}
+    current_time = None
+    pops_at_t = [0.0] * n_states
 
-    # Print the output
-    if runrdcheck:
-        state_pop_lines = []
-        recording = False
-        for line in result.stdout.split("\n"):
-            if recording:
-                state_pop_lines.append(line)
-            if "  time[fs]" in line:
-                recording = True
+    for line in lines:
+        if "Time  =" in line and "fs" in line:
+            try:
+                current_time = float(line.split("=")[1].split("fs")[0].strip())
+            except:
+                current_time = None
+            pops_at_t = []
 
-    else:
-        state_pop_lines = []
-        recording = False
-        for line in result.split("\n"):
-            if recording:
-                state_pop_lines.append(line)
-            if "  time[fs]" in line:
-                recording = True
-    pops_at_t = []
-    for line in state_pop_lines:
-        if "time" not in line and "---" not in line and line != "":
-            print(line)
-            parsedline = " ".join(line.split()).split(" ")
-            t = float(parsedline[0])
-            state = int(parsedline[1])
-            pop = float(parsedline[2])
-            if state == 1:  # resets local counter
-                pops_at_t = []
-            pops_at_t.append(pop)
-            if state == n_states:
-                populations[t] = pops_at_t
+        elif "state =" in line and "pop.:" in line:
+            parts = line.split()
+            try:
+                state = int(parts[2])  # state = X
+                pop = float(parts[4])  # pop.: Y
+                pops_at_t.append(pop)
+
+                # save once we get all states
+                if len(pops_at_t) == n_states:
+                    populations[current_time] = pops_at_t
+            except:
+                continue
+
+    print(f"[DEBUG] Parsed {len(populations)} time points from {output_path}")
     return populations
+
+# def read_rdcheckfile(name, dir, n_states, runrdcheck=True):
+#     """
+#     Retreives the time series of diabatic state populations
+#     """
+
+#     if runrdcheck:
+#         result = subprocess.run(
+#             ["rdcheck86", "-e"], cwd=f"./{dir}/{name}", capture_output=True, text=True
+#         )
+
+#     else: #read the content of rdcheck86 -e directly 
+#         with open(f"{dir}/{name}/output", "r") as file:
+#         # with open(f"{dir}{name}", "r") as file: # somethings off
+#             result = file.read()  # Read the entire file content
+#     populations = {}
+
+#     # Print the output
+#     if runrdcheck:
+#         state_pop_lines = []
+#         recording = False
+#         for line in result.stdout.split("\n"):
+#             if recording:
+#                 state_pop_lines.append(line)
+#             if "  time[fs]" in line:
+#                 recording = True
+
+#     else:
+#         state_pop_lines = []
+#         recording = False
+#         for line in result.split("\n"):
+#             if recording:
+#                 state_pop_lines.append(line)
+#             if "  time[fs]" in line:
+#                 recording = True
+#     pops_at_t = []
+#     for line in state_pop_lines:
+#         if "time" not in line and "---" not in line and line != "":
+#             print(line)
+#             parsedline = " ".join(line.split()).split(" ")
+#             t = float(parsedline[0])
+#             state = int(parsedline[1])
+#             pop = float(parsedline[2])
+#             if state == 1:  # resets local counter
+#                 pops_at_t = []
+#             pops_at_t.append(pop)
+#             if state == n_states:
+#                 populations[t] = pops_at_t
+#     return populations
 
 
 
